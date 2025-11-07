@@ -11,15 +11,16 @@ body {
   height: 100vh;
   background: url('images/sezon.jpeg') center/cover no-repeat;
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Изменено для поднятия контента вверх */
   justify-content: center;
   text-align: center;
+  padding-top: 60px; /* Добавлен отступ сверху */
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4); /* Меньше затемнения для лучшей видимости фона */
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .content {
@@ -28,12 +29,11 @@ body {
   max-width: 700px;
   padding: 0 20px;
   width: 100%;
-  margin-top: -80px; /* Поднимаем весь контент выше */
 }
 
-/* Контейнер автора - поднят почти к верху */
+/* Контейнер автора - максимально высоко */
 .author-container {
-  margin-bottom: 100px; /* Большой отступ между именем и заголовком */
+  margin-bottom: 120px; /* Увеличен отступ для поднятия имени выше */
 }
 
 .author-name {
@@ -56,14 +56,14 @@ body {
 
 .title-container p {
   font-size: 1.3rem;
-  margin: 0 0 30px 0;
+  margin: 0 0 60px 0; /* Увеличен отступ в 2 раза для опускания кнопки */
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Белая кнопка с серебристой окантовкой */
+/* Белая кнопка */
 .btn {
   display: inline-block;
   background: white; /* Белый фон */
@@ -73,39 +73,44 @@ body {
   border-radius: 30px;
   font-weight: bold;
   font-size: 1.1rem;
-  transition: all 0.3s ease;
-  border: 2px solid #c0c0c0; /* Серебристая окантовка */
+  transition: all 0.2s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
+  border: none;
 }
 
-.btn:hover, .btn:active {
-  background: #f0f0f0; /* Светло-серый при наведении/нажатии */
-  color: #000;
-  border: 2px solid #a0a0a0; /* Темнее серебристый при наведении */
-  transform: translateY(2px); /* Эффект нажатия */
+.btn:hover {
+  background: white;
+  transform: translateY(1px);
+}
+
+.btn:active {
+  background: #e0e0e0; /* Серый при нажатии */
+  transform: translateY(2px);
 }
 
 /* ====== BLOG SECTION ====== */
 .articles {
-  padding: 80px 20px;
+  padding: 40px 20px 80px 20px; /* Уменьшен верхний отступ для поднятия заголовка */
   max-width: 900px;
   margin: 0 auto;
-  background: white; /* Белый фон */
-  color: #333; /* Черный текст */
+  background: white;
+  color: #333;
 }
 
 .section-title {
   text-align: center;
-  margin-bottom: 50px;
-  font-size: 2.5rem;
-  color: #333; /* Черный цвет */
+  margin-bottom: 30px; /* Уменьшен отступ для приближения к первому блоку */
+  font-size: 2.2rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .post {
   display: flex;
-  margin-bottom: 50px;
-  background: #f9f9f9; /* Светло-серый фон для постов */
+  margin-bottom: 40px;
+  background: #f9f9f9;
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease;
@@ -129,13 +134,13 @@ body {
 }
 
 .post-text h3 {
-  color: #333; /* Черный для заголовков постов */
+  color: #333;
   margin-bottom: 15px;
   font-size: 1.4rem;
 }
 
 .post-text p {
-  color: #666; /* Темно-серый для текста */
+  color: #666;
   line-height: 1.6;
   margin: 0;
 }
@@ -149,12 +154,13 @@ footer {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* ====== SHOP PAGE ====== */
+/* ====== SHOP PAGE (темное оформление) ====== */
 .shop-header {
   background: #111;
   text-align: center;
   padding: 20px;
   position: relative;
+  color: white;
 }
 
 .shop {
@@ -163,44 +169,42 @@ footer {
   justify-content: center;
   gap: 20px;
   padding: 40px 20px;
-  background: white; /* Белый фон для магазина */
+  background: #0a0a0a; /* Темный фон */
 }
 
 .book-card {
-  background: #f9f9f9; /* Светлый фон для карточек книг */
+  background: #1a1a1a; /* Темный фон карточек */
   border-radius: 10px;
   overflow: hidden;
   width: 280px;
   text-align: center;
   padding-bottom: 20px;
   transition: transform 0.3s ease;
-  border: 1px solid #e0e0e0;
-  color: #333; /* Черный текст */
+  color: white; /* Белый текст */
 }
 
 .book-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .book-image {
   width: 100%;
   height: 380px;
-  background: #ddd; /* Светлый фон для изображений книг */
+  background: #333;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 80px;
-  color: #666; /* Темно-серый для эмодзи */
+  color: #ccc;
 }
 
 .book-card h2 {
-  color: #333; /* Черный для названий книг */
+  color: white; /* Белый для названий книг */
   margin: 15px 0;
 }
 
 .book-card p {
-  color: #666; /* Темно-серый для описаний */
+  color: rgba(255, 255, 255, 0.8);
   padding: 0 15px;
   margin-bottom: 15px;
 }
@@ -211,26 +215,23 @@ footer {
 }
 
 .back {
-  color: #333; /* Черный для кнопки назад */
+  color: #c0c0c0; /* Серебристый для кнопки назад */
   text-decoration: none;
   position: absolute;
   top: 20px;
   left: 20px;
   font-weight: bold;
-  background: white;
-  padding: 8px 15px;
-  border-radius: 20px;
-  border: 1px solid #ccc;
 }
 
 /* Адаптивность */
 @media (max-width: 768px) {
-  .content {
-    margin-top: -40px;
+  .hero {
+    padding-top: 40px;
+    align-items: center;
   }
   
   .author-container {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
   }
   
   .author-name {
@@ -244,6 +245,7 @@ footer {
   
   .title-container p {
     font-size: 1.1rem;
+    margin-bottom: 40px;
   }
   
   .btn {
@@ -263,5 +265,9 @@ footer {
   .book-card {
     width: 100%;
     max-width: 300px;
+  }
+  
+  .section-title {
+    margin-bottom: 20px;
   }
 }
