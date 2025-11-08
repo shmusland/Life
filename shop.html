@@ -3,56 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Магазин Шмуса</title>
+  <title>Магазин — Сезон в Шмусе</title>
+  <meta name="description" content="Купить книги 'Сезона в Шмусе' — рассказы и сезоны Андрея Бергани.">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <nav class="top-nav" role="navigation" aria-label="Главное меню">
+    <a href="index.html" class="nav-link">Главная</a>
+    <a href="shop.html" class="nav-link">Книги</a>
+    <a href="index.html#about" class="nav-link">Об авторе</a>
+    <a href="index.html#subscribe" class="nav-link btn-outline">Подписаться</a>
+  </nav>
+
   <header class="shop-header">
     <h1>КНИГИ СЕЗОНОВ В ШМУСЕ</h1>
+    <p class="shop-lead">Короткие сезоны и большие апдейты для мозга. Выберите формат и способ получения.</p>
   </header>
-  <section class="shop">
-    <div class="book-card">
-      <img src="images/Probudon.jpeg" alt="ПРОБУДОН ГЕНИЕВ" class="book-image">
+
+  <section class="shop" aria-live="polite">
+    <div class="book-card fade-up" role="article" aria-label="Пробудон Гениев">
+      <img src="images/Probudon.jpeg" alt="Обложка: ПРОБУДОН ГЕНИЕВ" class="book-image" loading="lazy" width="280" height="380">
       <h2>ПРОБУДОН ГЕНИЕВ</h2>
       <p>Это сезон чилловой бездны гениальности: там раздают апдейты на мышление, апгрейды на жизнь и немного шмус-магии для внутреннего вайба.</p>
       <a href="#" class="btn">Купить</a>
     </div>
-    <div class="book-card">
-      <img src="images/Razmnozhenie.png" alt="РАЗМНОЖЕНИЕ УМНЫХ" class="book-image">
+
+    <div class="book-card fade-up" role="article" aria-label="Размножение умных">
+      <img src="images/Razmnozhenie.png" alt="Обложка: РАЗМНОЖЕНИЕ УМНЫХ" class="book-image" loading="lazy" width="280" height="380">
       <h2>РАЗМНОЖЕНИЕ УМНЫХ</h2>
       <p>Каждая страница этого сезона — как софт для мозга. Скачал, обновился, проснулся в новой версии себя.</p>
       <a href="#" class="btn">Купить</a>
     </div>
-    <div class="book-card">
-      <img src="images/Pianaya.png" alt="С ПЬЯНОЙ РАДОСТИ" class="book-image">
+
+    <div class="book-card fade-up" role="article" aria-label="С Пьяной Радости">
+      <img src="images/Pianaya.png" alt="Обложка: С ПЬЯНОЙ РАДОСТИ" class="book-image" loading="lazy" width="280" height="380">
       <h2>С ПЬЯНОЙ РАДОСТИ</h2>
       <p>Это не про алкоголь. Это про жизнь, которая вставляет лучше любого бокала.</p>
       <a href="#" class="btn">Купить</a>
     </div>
   </section>
-  
+
   <div class="back-container">
     <a href="index.html" class="back-btn">← Назад на главную</a>
   </div>
 
-  <footer>
+  <footer role="contentinfo">
     <div class="footer-content">
       <div class="social-links">
-        <a href="https://t.me/your_telegram" class="social-link telegram-link" target="_blank">
-          <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.191l-1.83 8.725c-.129.586-.463.73-.937.455l-4-2.957-1.92 1.848c-.212.211-.39.39-.8.39l.286-4.029 7.186-6.49c.312-.278-.067-.432-.482-.155l-8.874 5.589-3.828-1.197c-.829-.256-.845-.829.176-1.226l14.854-5.726c.69-.25 1.293.171 1.067 1.226z"/>
-          </svg>
-          Telegram
-        </a>
-        <a href="mailto:your@email.com" class="social-link email-link">
-          <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M12 12.713l11.985-8.713H.015L12 12.713zm0 2.574L0 4.127V21h24V4.127L12 15.287z"/>
-          </svg>
-          Email
-        </a>
+        <a href="https://t.me/your_telegram" class="social-link telegram-link" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="mailto:your@email.com" class="social-link email-link">Email</a>
       </div>
       <p class="copyright">© 2025 Автор Андрей Бергани</p>
+      <div class="footer-meta">
+        <a href="privacy.html" class="footer-link">Политика конфиденциальности</a>
+      </div>
     </div>
   </footer>
+
+  <script>
+    window.addEventListener('load', () => document.body.classList.add('loaded'));
+
+    (function() {
+      const els = document.querySelectorAll('.fade-up');
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }
+        });
+      }, {threshold: 0.15});
+      els.forEach(el => obs.observe(el));
+    })();
+  </script>
 </body>
 </html>
