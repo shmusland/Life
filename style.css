@@ -107,6 +107,7 @@ body {
   letter-spacing: 2px;
 }
 
+/* Обычные посты */
 .post {
   display: flex;
   margin-bottom: 40px;
@@ -122,10 +123,14 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Исправленные изображения в постах */
 .post-image {
   width: 200px;
   height: 180px;
-  object-fit: cover;
+  object-fit: contain;
+  background: #f0f0f0;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .post-text {
@@ -142,7 +147,36 @@ body {
 .post-text p {
   color: #666;
   line-height: 1.6;
-  margin: 0;
+  margin: 0 0 15px 0;
+}
+
+/* Пост автора с круглым фото */
+.author-post {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.author-photo-container {
+  margin-bottom: 25px;
+}
+
+.author-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #e0e0e0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.author-description {
+  color: #666;
+  line-height: 1.7;
+  text-align: left;
+  max-width: 600px;
+  margin-top: 20px;
 }
 
 /* ====== FOOTER ====== */
@@ -152,6 +186,32 @@ footer {
   background: #000;
   border-top: 1px solid #333;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-link {
+  display: inline-block;
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+}
+
+.social-link:hover {
+  background: #555;
 }
 
 /* ====== SHOP PAGE ====== */
@@ -187,12 +247,12 @@ footer {
   transform: translateY(-5px);
 }
 
-/* ИСПРАВЛЕННЫЙ СТИЛЬ ДЛЯ ИЗОБРАЖЕНИЙ - ВАРИАНТ 1 */
+/* Исправленные изображения в магазине */
 .book-image {
   width: 100%;
   height: 380px;
-  object-fit: contain; /* Изменено с cover на contain */
-  background: #2a2a2a; /* Фон для случаев когда изображение меньше */
+  object-fit: contain;
+  background: #2a2a2a;
   padding: 10px;
   box-sizing: border-box;
 }
@@ -216,13 +276,27 @@ footer {
   font-size: 1rem;
 }
 
-.back {
+/* Кнопка назад в магазине - перемещена вниз */
+.back-container {
+  text-align: center;
+  padding: 20px;
+  background: #0a0a0a;
+}
+
+.back-btn {
   color: #c0c0c0;
   text-decoration: none;
-  position: absolute;
-  top: 20px;
-  left: 20px;
   font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border: 2px solid #c0c0c0;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #c0c0c0;
+  color: #333;
 }
 
 /* Адаптивность */
@@ -275,5 +349,15 @@ footer {
   
   .book-image {
     height: 300px;
+  }
+  
+  .author-photo {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .social-links {
+    flex-direction: column;
+    align-items: center;
   }
 }
