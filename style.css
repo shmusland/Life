@@ -89,7 +89,7 @@ body {
   transform: translateY(2px);
 }
 
-/* ====== BLOG SECTION ====== */
+/* ====== ARTICLES SECTION ====== */
 .articles {
   padding: 40px 20px 80px 20px;
   max-width: 900px;
@@ -107,9 +107,7 @@ body {
   letter-spacing: 2px;
 }
 
-/* ====== ОБНОВЛЕННЫЕ СТИЛИ ДЛЯ ПОСТОВ ====== */
-
-/* Общие стили для постов */
+/* ====== ОБЩИЕ СТИЛИ ДЛЯ ПОСТОВ ====== */
 .post {
   margin-bottom: 50px;
   background: #f9f9f9;
@@ -143,19 +141,28 @@ body {
   text-align: center;
 }
 
-/* Стили для изображений под заголовками */
-.post-image-bottom {
-  width: 100%;
-  max-width: 400px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 15px auto;
-  display: block;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+/* ====== СТИЛИ ДЛЯ БЛОКА АВТОРА ====== */
+.author-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
 }
 
-/* Стили для первого поста (про Шмус) */
+.author-photo-container {
+  margin-bottom: 25px;
+}
+
+.author-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #e0e0e0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
 .article-content {
   color: #666;
   line-height: 1.7;
@@ -172,6 +179,18 @@ body {
   text-align: center;
   border-bottom: 2px solid #ff9800;
   padding-bottom: 10px;
+}
+
+/* ====== СТИЛИ ДЛЯ ПОСТОВ С КАРТИНКАМИ ПОД ЗАГОЛОВКАМИ ====== */
+.post-image-bottom {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 15px auto;
+  display: block;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* ====== FOOTER ====== */
@@ -242,7 +261,6 @@ footer {
   transform: translateY(-5px);
 }
 
-/* Исправленные изображения в магазине */
 .book-image {
   width: 100%;
   height: 380px;
@@ -271,7 +289,6 @@ footer {
   font-size: 1rem;
 }
 
-/* Кнопка назад в магазине - перемещена вниз */
 .back-container {
   text-align: center;
   padding: 20px;
@@ -294,41 +311,7 @@ footer {
   color: #333;
 }
 
-/* ====== СТИЛИ ДЛЯ БЛОКА АВТОРА ====== */
-.author-post {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 30px;
-  background: #f9f9f9;
-  border-radius: 12px;
-  border: 1px solid #e0e0e0;
-  margin-bottom: 50px;
-}
-
-.author-photo-container {
-  margin-bottom: 25px;
-}
-
-.author-photo {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid #e0e0e0;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.author-description {
-  color: #666;
-  line-height: 1.7;
-  text-align: left;
-  max-width: 600px;
-  margin-top: 20px;
-}
-
-/* Адаптивность */
+/* ====== АДАПТИВНОСТЬ ====== */
 @media (max-width: 768px) {
   .hero {
     padding-top: 40px;
@@ -403,7 +386,6 @@ footer {
   }
 }
 
-/* Дополнительные медиа-запросы для очень маленьких экранов */
 @media (max-width: 480px) {
   .title-container h1 {
     font-size: 2rem;
