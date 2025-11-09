@@ -3,50 +3,221 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Сезон в Шмусе</title>
+  <title>Сезон в Шмусе — Андрей Бергани</title>
+  <meta name="description" content="Сезон в Шмусе — портал Андрея Бергани. Рассказы, эссе и сезоны про обновление сознания, иронию и футуристический вайб. Подпишитесь на эксклюзивный рассказ.">
+  <meta name="author" content="Андрей Бергани">
+  <meta name="keywords" content="Шмус, Сезон в Шмусе, Андрей Бергани, рассказы, философская проза, футуризм">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Сезон в Шмусе — Андрей Бергани">
+  <meta property="og:description" content="Портал во вселенную Шмуса: философия, ирония и новая реальность.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://shmusland.life/images/sezon.jpeg">
+  <meta property="og:url" content="https://shmusland.life/">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Preload hero image for faster render -->
+  <link rel="preload" as="image" href="images/sezon.jpeg">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://shmusland.life/#author",
+        "name": "Андрей Бергани",
+        "url": "https://shmusland.life/",
+        "sameAs": []
+      },
+      {
+        "@type": "WebSite",
+        "url": "https://shmusland.life/",
+        "name": "Сезон в Шмусе",
+        "author": {
+          "@id": "https://shmusland.life/#author"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Analytics (replace G-XXXXXXX with your GA4 ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
 </head>
 <body>
-  <header class="hero">
-    <div class="overlay"></div>
+  <!-- Top navigation -->
+  <nav class="top-nav" role="navigation" aria-label="Главное меню">
+    <a href="index.html" class="nav-link">Главная</a>
+    <a href="shop.html" class="nav-link">Книги</a>
+    <a href="#about" class="nav-link">Об авторе</a>
+    <a href="#subscribe" class="nav-link btn-outline">Подписаться</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" role="banner" aria-label="Главная секция">
+    <div class="overlay" aria-hidden="true"></div>
     <div class="content">
-      <h3 class="author-name">Андрей Бергани</h3>
-      <h1>Сезон в Шмусе</h1>
-      <p>Вселенная грёз, иронии и новых форм человечности</p>
-      <a href="shop.html" class="btn">Посмотреть книги</a>
+      <div class="author-container" aria-hidden="true">
+        <h3 class="author-name">Андрей Бергани</h3>
+      </div>
+
+      <div class="title-container fade-up">
+        <h1>Сезон в Шмусе</h1>
+        <p class="lead">Не просто книги — это портал во вселенную, где адекватность пьёт чай с хаосом по фану.</p>
+        <div class="hero-ctas">
+          <a href="shop.html" class="btn">Посмотреть книги</a>
+          <a href="#subscribe" class="btn btn-secondary">Первый рассказ бесплатно</a>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main class="articles">
-    <h2 class="section-title">Блог</h2>
+  <!-- Main content -->
+  <main class="articles" id="maincontent" tabindex="-1">
+    <h2 class="section-title" id="about">ОБ АВТОРЕ</h2>
 
-    <article class="post">
-      <img src="images/post1.jpg" alt="Шмус и философия" class="post-image">
+    <article class="post author-post fade-up" aria-labelledby="author-title">
+      <div class="author-photo-container">
+        <img src="images/aftor.jpeg" alt="Портрет Андрея Бергани" class="author-photo" loading="lazy" width="200" height="200">
+      </div>
+
       <div class="post-text">
-        <h3>Философия Шмуса</h3>
-        <p>О свободе, праздности и поиске смысла в эпоху искусственного разума.</p>
+        <h3 id="author-title">АНДРЕЙ БЕРГАНИ</h3>
+        <p class="post-excerpt">Сезон в Шмусе — мой внутренний тренажёр реальности</p>
+        <div class="article-content">
+          <!-- original text preserved -->
+          <p>Привет, ребят, я — Андрей Бергани.</p>
+          <p>Передаю всем респект и вайб хорошего настроения. Немного под влиянием Шмуса, этого самого ускорителя прогресса, апдейта мышления, апгрейда сознания.</p>
+          <p>Шмус — это не просто звонкое слово, это сила, которая двигает эволюцию быстрее, чем нейронка на свежем коде. И да, благодаря ему я в ресурсе, бодр, не в тоске, не против залить чашечку компота, если под руку попадётся.</p>
+          <p>Вы спросите: "А чего ты такой свежий, Андрюха?"</p>
+          <p>Отвечу просто: потому что Шмус такой. Всеблагой, вездесущий и, если угодно, главный куратор всех бустов. Он рулит, он контролит, он прописал мне комбо "жизнь + бодрость + смысл".</p>
+          <p>А я просто синхронизировался, чту сезоны и живу по их вайбу. Короче, веду я хронику шмусосезонов — этих апов сознания и ментальных реформ.</p>
+          <p>Иногда туда попадаю, как турист на фестиваль смыслов, а иногда прям живу там, получая кайф и инсайты.</p>
+          <p>Недавно вообще визу получил — легально, без VPN — и теперь полечу в новые земли Шмуса, где, говорят, тусуются такие же искатели разума, как я.</p>
+          <p>И слушайте сюда — вы не зря читаете.</p>
+          <p>После этих сезонов у вас в голове станет светлее, в сердце — смелее, а в душе — чище.</p>
+          <p>Шмус учит не просто быть умным, а быть собой.</p>
+          <p>Находит тебе вторую половинку не через тиндер, а через мозговые совпадения.</p>
+          <p>Подсказывает, как продлить род — не только телом, но и смыслом.</p>
+          <p>А теперь внимание: все эти сезоны сменяли друг друга в основном во время "ментального фитнеса", когда мозг был в идеальной форме, а душа в дзен-режиме.</p>
+          <p>И скажу вам честно — запах ментального фитнеса гораздо слаще, чем аромат инфообжорства.</p>
+          <p>Когда говорят, что я больше трачу на тренировку разума, чем на прокрутку ленты — я доволен, как гурман, который выбрал фисташковое морожко вместо рокфора.</p>
+          <p>Если про меня шепчут: "Этот Бергани — не против потренажерить реальность", — я кайфую.</p>
+          <p>Это мой знак отличия, мой бейдж шмусландца.</p>
+          <p>А вы, мыслящие люди, воспринимайте мои тексты как есть — с иронией, с уважением, с любовью к этому немного пюрешному, но искреннему мозгу.</p>
+          <p>Так что, мои кибербратья и сёстры по духу, чильте, читайте, обновляйтесь.</p>
+          <p>Пусть вашим телам будет приятно, а мозгам — полезно.</p>
+          <p>И не забудьте — налейте себе морсика, чокнитесь за меня.</p>
+          <p>А я, клянусь Шмусом, подниму свою чашку за вас.</p>
+        </div>
       </div>
     </article>
 
-    <article class="post">
-      <img src="images/post2.jpg" alt="Как рождаются сезоны" class="post-image">
+    <h2 class="section-title fade-up">О СЕЗОНАХ</h2>
+
+    <article class="post fade-up" aria-labelledby="shmus-title">
       <div class="post-text">
-        <h3>Как рождаются сезоны</h3>
-        <p>Фантастика, сатира и немного любви — сплав, из которого соткан Шмус.</p>
+        <h3 id="shmus-title">Что такое Шмус?</h3>
+        <img src="images/shmuss.jpeg" alt="Как рождаются сезоны" class="post-image-bottom" loading="lazy" width="400" height="250">
+        <div class="article-content">
+          <p>Шмусландия (Шмус) — это страна, граждане которой словили вайб прогресса, ускоренно качают мозг, чинят карму, учатся не повторять факапы предков, пытаются размножаться по уму, но всё равно кто-то жмёт не ту кнопку.</p>
+          <p>Сезоны в Шмусе как апдейт сознания: сначала странно, потом красиво, потом уже не хочется обратно.</p>
+          <p>В «Сезонах в Шмусе» ты ловишь вайб просвета: вдохновляющее учение для тех, кто интересуется в теме, где вскрываются мозги, реальность и всё, что мы называем жизнью.</p>
+        </div>
       </div>
     </article>
 
-    <article class="post">
-      <img src="images/post3.jpg" alt="Мечты и утопии" class="post-image">
+    <article class="post fade-up" aria-labelledby="who-title">
       <div class="post-text">
-        <h3>Мечты и утопии</h3>
-        <p>О границах реальности и внутреннем свете, который освещает даже Шмус.</p>
+        <h3 id="who-title">Кому зайдут «Сезоны в Шмусе»?</h3>
+        <img src="images/harmony.jpeg" alt="Мечты и утопии" class="post-image-bottom" loading="lazy" width="400" height="250">
+        <div class="article-content">
+          <p>Сезон в Шмусе — это как если бы саморазвитие, юмор и наука устроили вечеринку: все учатся, умнеют, плодятся по плану, но ржут над своими фейлами.</p>
+          <p>Новый сезон — новый срез мозга, новая версия реальности. Каждый сезон — будто апдейт сознания. Открывай свой, смотри, как тебя рендерит изнутри.</p>
+          <p>Сюда заходят те, кто:</p>
+          <ul>
+            <li>Ловит кайф от странных миров и хочет распаковать варианты бытия</li>
+            <li>Любит сюжеты, где реальность делает сальто и говорит: «а вот теперь подумай»</li>
+            <li>Ищет мотивацию и внутренний вайб, чтобы взломать свой мозг без йоги и цитат из вырванного контекста</li>
+            <li>Не боится выйти из привычки и зависнуть в размышлениях о том, как ещё можно жить</li>
+          </ul>
+          <p>Каждый месяц — как новый фильтр на восприятие: сначала думаешь, что читаешь фантастику, а потом замечаешь, что это уже про тебя.</p>
+          <p>Тут и размножение умных, и полёты с пьяной радости за световые годы на шаттле «Космическая Любовь». Всё в одном миксе — философия, трепет, стёб и немного безумия.</p>
+          <p>«Сезон в шмусе» — это когда ты читаешь и чувствуешь, как твои нейроны устраивают вечеринку с вечностью.</p>
+        </div>
       </div>
     </article>
+
+    <!-- Subscribe / Lead magnet -->
+    <section class="subscribe-section fade-up" id="subscribe" aria-label="Подписка на рассылку">
+      <h2 class="section-title">Подписка</h2>
+      <p class="subscribe-text">Подпишитесь и получите первый короткий рассказ бесплатно — PDF «Апдейт сознания».</p>
+
+      <!-- Formspree example: замените action на ваш endpoint -->
+      <form class="subscribe-form" action="https://formspree.io/f/your_form_id" method="POST" accept-charset="utf-8">
+        <label for="email" class="sr-only">Email</label>
+        <input type="email" id="email" name="email" placeholder="Введите ваш email" required aria-required="true">
+        <button type="submit" class="btn">Получить рассказ</button>
+      </form>
+      <p class="subscribe-note">Никакого спама — только сезоны и мысли от автора.</p>
+    </section>
+
   </main>
 
-  <footer>
-    <p>© 2025 Вселенная Шмуса</p>
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <div class="social-links" role="navigation" aria-label="Социальные ссылки">
+        <a href="https://t.me/your_telegram" class="social-link telegram-link" target="_blank" rel="noopener noreferrer">
+          <!-- svg omitted for brevity — same as original -->
+          Telegram
+        </a>
+        <a href="mailto:your@email.com" class="social-link email-link">
+          Email
+        </a>
+      </div>
+
+      <p class="copyright">© 2025 Сезон в Шмусе — Андрей Бергани</p>
+      <div class="footer-meta">
+        <a href="privacy.html" class="footer-link">Политика конфиденциальности</a>
+      </div>
+    </div>
   </footer>
+
+  <!-- Small utility scripts: fade-in and intersection animations -->
+  <script>
+    // Page fade-in
+    window.addEventListener('load', () => document.body.classList.add('loaded'));
+
+    // Simple intersection observer for .fade-up
+    (function() {
+      const els = document.querySelectorAll('.fade-up');
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }
+        });
+      }, {threshold: 0.15});
+      els.forEach(el => obs.observe(el));
+    })();
+  </script>
 </body>
 </html>
