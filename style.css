@@ -1,3 +1,6 @@
+/* =====================
+   Reset & Base Styles
+   ===================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +13,12 @@ html, body {
   scroll-behavior: smooth;
   color: #1a1a1a;
   background-color: #fff;
-  overflow-x: hidden; /* ✅ убирает горизонтальный скролл */
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 /* =====================
@@ -21,19 +29,19 @@ html, body {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  padding: 0.8rem;
+  padding: 1rem;
   background-color: #fafafa;
   position: sticky;
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid #eee;
-  font-size: 0.9rem; /* ✅ уменьшен размер шрифта меню */
 }
 
 .nav-link {
   text-decoration: none;
   color: #1a1a1a;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 0.9rem;
   transition: color 0.3s;
 }
 
@@ -42,36 +50,14 @@ html, body {
   color: #ff6600;
 }
 
-/* =====================
-   Buttons
-   ===================== */
-.btn,
-.btn-outline {
-  font-size: 0.9rem; /* ✅ уменьшен общий размер текста кнопок */
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.6rem 1.4rem;
-  background-color: #ff6600;
-  color: #fff;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background-color: #e65500;
-}
-
 .btn-outline {
   border: 2px solid #ff6600;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 6px;
   color: #ff6600;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 0.9rem;
   transition: all 0.3s;
 }
 
@@ -81,7 +67,37 @@ html, body {
 }
 
 /* =====================
-   Hero
+   Buttons
+   ===================== */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background-color: #ff6600;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #e65500;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  border: 2px solid #ff6600;
+  color: #ff6600;
+}
+
+.btn-secondary:hover {
+  background-color: #ff6600;
+  color: #fff;
+}
+
+/* =====================
+   Hero Section
    ===================== */
 .hero {
   position: relative;
@@ -96,96 +112,128 @@ html, body {
   color: #fff;
 }
 
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero .content {
+  position: relative;
+  z-index: 2;
+}
+
 .hero h1 {
-  font-size: 2.2rem; /* ✅ уменьшен размер */
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .hero p.lead {
-  font-size: 1.1rem; /* ✅ уменьшен размер */
-  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-ctas a {
+  margin: 0 0.5rem;
 }
 
 /* =====================
-   Dark mode shop
+   Sections & Articles
    ===================== */
-body.dark-mode {
-  background-color: #0f0f0f;
-  color: #f4f4f4;
+.articles {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.dark-mode .top-nav {
-  background-color: #1a1a1a;
-  border-bottom: 1px solid #333;
-}
-
-.dark-mode .nav-link {
-  color: #f4f4f4;
-}
-
-.dark-mode .nav-link:hover {
-  color: #ff6600;
-}
-
-.shop-header {
+.section-title {
+  font-size: 1.8rem;
   text-align: center;
-  padding: 3rem 1rem;
-}
-
-.shop-header h1 {
-  font-size: 2rem;
+  margin-bottom: 2rem;
   color: #ff6600;
 }
 
-.shop-lead {
-  color: #ccc;
-}
-
-.shop {
+/* =====================
+   Post / Author
+   ===================== */
+.post {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  margin-bottom: 3rem;
   gap: 2rem;
-  padding: 2rem;
 }
 
-.book-card {
-  background-color: #1a1a1a;
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-align: center;
-  width: 300px;
-  box-shadow: 0 0 15px rgba(255,255,255,0.05);
+.post-text {
+  flex: 1 1 400px;
 }
 
-.book-card h2 {
-  color: #ff6600;
-  font-size: 1.3rem;
+.author-photo-container {
+  flex: 0 0 200px;
+}
+
+.author-photo {
+  border-radius: 50%;
+  border: 3px solid #ff6600;
+}
+
+/* Images in posts */
+.post-image-bottom {
+  width: 100%;
+  max-width: 400px;
   margin-top: 1rem;
+  border-radius: 12px;
 }
 
-.book-card p {
-  color: #ccc;
-  margin: 0.5rem 0 1rem;
+/* Article content */
+.article-content p,
+.article-content ul {
+  margin-bottom: 1rem;
 }
 
-.book-image {
-  border-radius: 8px;
+.article-content ul {
+  list-style: disc;
+  margin-left: 1.5rem;
 }
 
 /* =====================
-   Footer + Icons
+   Subscribe Section
+   ===================== */
+.subscribe-section {
+  background-color: #faf5f0;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  margin: 3rem auto;
+  max-width: 600px;
+}
+
+.subscribe-form {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.subscribe-form input[type="email"] {
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex: 1 1 250px;
+}
+
+.subscribe-form button {
+  flex: 0 0 auto;
+}
+
+/* =====================
+   Footer
    ===================== */
 footer {
   background-color: #fafafa;
   padding: 2rem;
   text-align: center;
   border-top: 1px solid #eee;
-}
-
-.dark-mode footer {
-  background-color: #1a1a1a;
-  border-top: 1px solid #333;
 }
 
 .social-links {
@@ -198,19 +246,164 @@ footer {
 .social-link {
   text-decoration: none;
   color: #1a1a1a;
-  font-weight: 600;
-}
-
-.social-link i {
-  margin-right: 6px;
-}
-
-.dark-mode .social-link {
-  color: #f4f4f4;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s;
 }
 
 .social-link:hover {
   color: #ff6600;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #999;
+}
+
+.footer-link:hover {
+  color: #ff6600;
+}
+
+/* =====================
+   Shop Styles - Dark Theme
+   ===================== */
+body.dark-theme {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+body.dark-theme .top-nav {
+  background-color: #2d2d2d;
+  border-bottom-color: #444;
+}
+
+body.dark-theme .nav-link {
+  color: #fff;
+}
+
+body.dark-theme .nav-link:hover {
+  color: #ff6600;
+}
+
+body.dark-theme .btn-outline {
+  border-color: #ff6600;
+  color: #ff6600;
+}
+
+body.dark-theme .btn-outline:hover {
+  background-color: #ff6600;
+  color: #1a1a1a;
+}
+
+.shop-header {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #2d2d2d;
+}
+
+.shop-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.shop-lead {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.shop {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.book-card {
+  background: #2d2d2d;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #444;
+  transition: transform 0.3s;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-image {
+  width: 200px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 auto 1.5rem;
+}
+
+.book-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.book-card p {
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.back-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.back-btn {
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.back-btn:hover {
+  color: #e65500;
+}
+
+body.dark-theme footer {
+  background-color: #2d2d2d;
+  border-top-color: #444;
+}
+
+body.dark-theme .social-link {
+  color: #fff;
+}
+
+body.dark-theme .footer-link {
+  color: #999;
+}
+
+/* =====================
+   Animations: fade-up
+   ===================== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* =====================
@@ -227,15 +420,48 @@ footer {
   }
 
   .top-nav {
-    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.8rem;
+  }
+
+  .nav-link {
     font-size: 0.85rem;
   }
 
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .hero p.lead {
     font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .shop {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-ctas a {
+    margin: 0;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+  }
+
+  .subscribe-form input[type="email"] {
+    flex: 1 1 100%;
   }
 }
