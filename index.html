@@ -103,7 +103,19 @@
         <div class="article-content">
           <p class="first-paragraph">Привет, ребят, я — Андрей Бергани.</p>
           <p>Передаю всем респект и вайб хорошего настроения. Немного под влиянием Шмуса, этого самого ускорителя прогресса, апдейта мышления, апгрейда сознания.</p>
-          <!-- остальной текст автора -->
+          
+          <div class="text-collapse">
+            <div class="text-preview">
+              <p>Шмус — это не просто место, это состояние ума. Когда ты понимаешь, что реальность гораздо гибче, чем нам кажется...</p>
+              <span class="expand-dots">...</span>
+            </div>
+            <div class="text-full">
+              <p>Шмус — это не просто место, это состояние ума. Когда ты понимаешь, что реальность гораздо гибче, чем нам кажется. Каждый сезон в Шмусе — это новый уровень осознания, новый виток спирали развития.</p>
+              <p>Здесь нет случайных встреч и бессмысленных событий. Каждый персонаж, каждая ситуация — это часть большого пазла, который складывается в картину твоего личного роста.</p>
+              <p>Шмусландия существует на стыке реальности и воображения, где мысли материальны, а возможности ограничены только твоей смелостью.</p>
+              <span class="collapse-btn">Свернуть</span>
+            </div>
+          </div>
         </div>
       </div>
     </article>
@@ -115,8 +127,19 @@
         <h3 id="shmus-title">Что такое Шмус?</h3>
         <img src="images/shmuss.jpeg" alt="Как рождаются сезоны" class="post-image-bottom" loading="lazy" width="400" height="250">
         <div class="article-content">
-          <p>Шмусландия (Шмус) — это страна, граждане которой словили вайб прогресса, ускоренно качают мозг, чинят карму...</p>
-          <!-- остальной текст сохранён -->
+          <div class="text-collapse">
+            <div class="text-preview">
+              <p>Шмусландия (Шмус) — это страна, граждане которой словили вайб прогресса, ускоренно качают мозг, чинят карму...</p>
+              <span class="expand-dots">...</span>
+            </div>
+            <div class="text-full">
+              <p>Шмусландия (Шмус) — это страна, граждане которой словили вайб прогресса, ускоренно качают мозг, чинят карму и перепрошивают реальность. Здесь каждый день — это новый челлендж, а каждая мысль — это семя будущего.</p>
+              <p>В Шмусе нет места скуке и рутине. Здесь время течет по-другому — то ускоряясь до скорости света, то замедляясь до медитативного состояния полного осознания.</p>
+              <p>Это пространство, где встречаются квантовая физика и духовные практики, где технологии служат не для порабощения, а для освобождения человеческого потенциала.</p>
+              <p>Шмус — это лаборатория будущего, где мы тестируем новые форматы сознания и создаем протоколы для следующей эволюционной ступени человечества.</p>
+              <span class="collapse-btn">Свернуть</span>
+            </div>
+          </div>
         </div>
       </div>
     </article>
@@ -126,7 +149,25 @@
         <h3 id="who-title">Кому зайдут «Сезоны в Шмусе»?</h3>
         <img src="images/harmony.jpeg" alt="Мечты и утопии" class="post-image-bottom" loading="lazy" width="400" height="250">
         <div class="article-content">
-          <p>Сезон в Шмусе — это как если бы саморазвитие, юмор и наука устроили вечеринку...</p>
+          <div class="text-collapse">
+            <div class="text-preview">
+              <p>Сезон в Шмусе — это как если бы саморазвитие, юмор и наука устроили вечеринку...</p>
+              <span class="expand-dots">...</span>
+            </div>
+            <div class="text-full">
+              <p>Сезон в Шмусе — это как если бы саморазвитие, юмор и наука устроили вечеринку, а ты получил приглашение в самый разгар. Это для тех, кто устал от шаблонного мышления и готов к интеллектуальному приключению.</p>
+              <p>Идеально подойдет:</p>
+              <ul>
+                <li>Любителям философской прозы с элементами магического реализма</li>
+                <li>Тем, кто ищет не просто развлечение, а пищу для ума</li>
+                <li>Поклонникам интеллектуального юмора и иронии</li>
+                <li>Искателям новых форматов storytelling</li>
+                <li>Всем, кто верит, что книги могут менять сознание</li>
+              </ul>
+              <p>Если ты иногда задумываешься о природе реальности, любишь нестандартные метафоры и готов смотреть на привычные вещи под новым углом — добро пожаловать в Шмус!</p>
+              <span class="collapse-btn">Свернуть</span>
+            </div>
+          </div>
         </div>
       </div>
     </article>
@@ -174,6 +215,24 @@
   <script>
     window.addEventListener('load', () => document.body.classList.add('loaded'));
 
+    // Text expand/collapse functionality
+    document.querySelectorAll('.expand-dots').forEach(dots => {
+      dots.addEventListener('click', function() {
+        const collapseContainer = this.closest('.text-collapse');
+        collapseContainer.querySelector('.text-preview').style.display = 'none';
+        collapseContainer.querySelector('.text-full').style.display = 'block';
+      });
+    });
+
+    document.querySelectorAll('.collapse-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const collapseContainer = this.closest('.text-collapse');
+        collapseContainer.querySelector('.text-full').style.display = 'none';
+        collapseContainer.querySelector('.text-preview').style.display = 'block';
+      });
+    });
+
+    // Intersection Observer for fade-up animations
     (function() {
       const els = document.querySelectorAll('.fade-up');
       const obs = new IntersectionObserver((entries) => {
