@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="top-nav">
+  <nav class="top-nav" role="navigation" aria-label="Главное меню">
     <a href="index.html" class="nav-link">Главная</a>
     <a href="shop.html" class="nav-link">Книги</a>
     <a href="index.html#about" class="nav-link">Об авторе</a>
@@ -22,25 +22,25 @@
     <p class="shop-lead">Короткие сезоны и большие апдейты для мозга. Выберите формат и способ получения.</p>
   </header>
 
-  <section class="shop">
-    <div class="book-card fade-up">
-      <img src="images/Probudon.jpeg" alt="Обложка: ПРОБУДОН ГЕНИЕВ" class="book-image" loading="lazy">
+  <section class="shop" aria-live="polite">
+    <div class="book-card fade-up" role="article" aria-label="Пробудон Гениев">
+      <img src="images/Probudon.jpeg" alt="Обложка: ПРОБУДОН ГЕНИЕВ" class="book-image" loading="lazy" width="280" height="380">
       <h2>ПРОБУДОН ГЕНИЕВ</h2>
-      <p>Сезон чилловой бездны гениальности — апдейты мышления, апгрейды жизни и немного шмус-магии.</p>
+      <p>Это сезон чилловой бездны гениальности: там раздают апдейты на мышление, апгрейды на жизнь и немного шмус-магии для внутреннего вайба.</p>
       <a href="#" class="btn">Купить</a>
     </div>
 
-    <div class="book-card fade-up">
-      <img src="images/Razmnozhenie.png" alt="Обложка: РАЗМНОЖЕНИЕ УМНЫХ" class="book-image" loading="lazy">
+    <div class="book-card fade-up" role="article" aria-label="Размножение умных">
+      <img src="images/Razmnozhenie.png" alt="Обложка: РАЗМНОЖЕНИЕ УМНЫХ" class="book-image" loading="lazy" width="280" height="380">
       <h2>РАЗМНОЖЕНИЕ УМНЫХ</h2>
-      <p>Каждая страница — как софт для мозга. Скачал, обновился, проснулся в новой версии себя.</p>
+      <p>Каждая страница этого сезона — как софт для мозга. Скачал, обновился, проснулся в новой версии себя.</p>
       <a href="#" class="btn">Купить</a>
     </div>
 
-    <div class="book-card fade-up">
-      <img src="images/Pianaya.png" alt="Обложка: С ПЬЯНОЙ РАДОСТИ" class="book-image" loading="lazy">
+    <div class="book-card fade-up" role="article" aria-label="С Пьяной Радости">
+      <img src="images/Pianaya.png" alt="Обложка: С ПЬЯНОЙ РАДОСТИ" class="book-image" loading="lazy" width="280" height="380">
       <h2>С ПЬЯНОЙ РАДОСТИ</h2>
-      <p>Не про алкоголь — про жизнь, которая вставляет лучше любого бокала.</p>
+      <p>Это не про алкоголь. Это про жизнь, которая вставляет лучше любого бокала.</p>
       <a href="#" class="btn">Купить</a>
     </div>
   </section>
@@ -49,27 +49,33 @@
     <a href="index.html" class="back-btn">← Назад на главную</a>
   </div>
 
-  <footer>
+  <footer role="contentinfo">
     <div class="footer-content">
       <div class="social-links">
-        <a href="https://t.me/your_telegram" class="social-link telegram-link" target="_blank">Telegram</a>
+        <a href="https://t.me/your_telegram" class="social-link telegram-link" target="_blank" rel="noopener noreferrer">Telegram</a>
         <a href="mailto:your@email.com" class="social-link email-link">Email</a>
       </div>
       <p class="copyright">© 2025 Автор Андрей Бергани</p>
-      <a href="privacy.html" class="footer-link">Политика конфиденциальности</a>
+      <div class="footer-meta">
+        <a href="privacy.html" class="footer-link">Политика конфиденциальности</a>
+      </div>
     </div>
   </footer>
 
   <script>
-    window.addEventListener('load',()=>document.body.classList.add('loaded'));
-    (function(){
-      const els=document.querySelectorAll('.fade-up');
-      const obs=new IntersectionObserver(entries=>{
-        entries.forEach(e=>{
-          if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}
+    window.addEventListener('load', () => document.body.classList.add('loaded'));
+
+    (function() {
+      const els = document.querySelectorAll('.fade-up');
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }
         });
-      },{threshold:0.15});
-      els.forEach(el=>obs.observe(el));
+      }, {threshold: 0.15});
+      els.forEach(el => obs.observe(el));
     })();
   </script>
 </body>
