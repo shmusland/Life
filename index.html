@@ -3,54 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Сезон в Шмусе — Андрей Бергани | Философская проза, ирония и футуризм</title>
-  <meta name="description" content="Официальный портал Андрея Бергани — 'Сезон в Шмусе'. Философская проза, ироничные эссе и футуристические сезоны про обновление сознания. Подпишитесь и получите рассказ бесплатно.">
-  <meta name="keywords" content="Сезон в Шмусе, Андрей Бергани, философская проза, футуризм, рассказы, эссе, Шмусландия">
+  <title>Сезон в Шмусе — Андрей Бергани</title>
+  <meta name="description" content="Сезон в Шмусе — портал Андрея Бергани. Рассказы, эссе и сезоны про обновление сознания, иронию и футуристический вайб. Подпишитесь на эксклюзивный рассказ.">
   <meta name="author" content="Андрей Бергани">
+  <meta name="keywords" content="Шмус, Сезон в Шмусе, Андрей Бергани, рассказы, философская проза, футуризм">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Сезон в Шмусе — Андрей Бергани">
-  <meta property="og:description" content="Философская проза и ирония будущего. Портал во вселенную Шмуса.">
+  <meta property="og:description" content="Портал во вселенную Шмуса: философия, ирония и новая реальность.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://shmusland.life/images/sezon.jpeg">
   <meta property="og:url" content="https://shmusland.life/">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Сезон в Шмусе — Андрей Бергани">
-  <meta name="twitter:description" content="Рассказы и сезоны про обновление сознания, иронию и прогресс.">
-  <meta name="twitter:image" content="https://shmusland.life/images/sezon.jpeg">
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://shmusland.life/">
-
-  <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
-  <!-- Fonts -->
+  <link rel="preload" as="image" href="images/sezon.jpeg">
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Structured Data -->
+  <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Сезон в Шмусе",
-    "url": "https://shmusland.life/",
-    "author": {
-      "@type": "Person",
-      "name": "Андрей Бергани",
-      "url": "https://shmusland.life/"
-    },
-    "description": "Философская проза и футуризм Андрея Бергани."
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://shmusland.life/#author",
+        "name": "Андрей Бергани",
+        "url": "https://shmusland.life/"
+      },
+      {
+        "@type": "WebSite",
+        "url": "https://shmusland.life/",
+        "name": "Сезон в Шмусе",
+        "author": {"@id": "https://shmusland.life/#author"}
+      }
+    ]
   }
   </script>
 
-  <!-- Google Analytics -->
+  <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXCTNR4M16"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -60,22 +51,14 @@
   </script>
 </head>
 <body>
-  <!-- Navigation -->
   <nav class="top-nav" role="navigation" aria-label="Главное меню">
-    <div class="nav-container">
-      <div class="logo">ШМУС</div>
-      <button class="menu-toggle" aria-label="Меню">☰</button>
-      <div class="nav-links">
-        <a href="index.html" class="nav-link">Главная</a>
-        <a href="shop.html" class="nav-link">Книги</a>
-        <a href="#about" class="nav-link">Об авторе</a>
-        <a href="#subscribe" class="nav-link btn-outline">Подписаться</a>
-      </div>
-    </div>
+    <a href="index.html" class="nav-link">Главная</a>
+    <a href="shop.html" class="nav-link">Книги</a>
+    <a href="#about" class="nav-link">Об авторе</a>
+    <a href="#subscribe" class="nav-link btn-outline">Подписаться</a>
   </nav>
 
-  <!-- Hero -->
-  <header class="hero">
+  <header class="hero" role="banner">
     <div class="overlay"></div>
     <div class="content">
       <h3 class="author-name">Андрей Бергани</h3>
@@ -90,19 +73,17 @@
     </div>
   </header>
 
-  <!-- Main content -->
   <main class="articles" id="maincontent">
     <h2 class="section-title" id="about">ОБ АВТОРЕ</h2>
 
     <article class="post author-post fade-up">
-      <div class="author-photo-container">
-        <img src="images/aftor.jpeg" alt="Андрей Бергани" class="author-photo" loading="lazy">
-      </div>
+      <img src="images/aftor.jpeg" alt="Портрет Андрея Бергани" class="author-photo" loading="lazy">
       <div class="post-text">
         <h3>АНДРЕЙ БЕРГАНИ</h3>
         <p class="post-excerpt">Сезон в Шмусе — мой внутренний тренажёр реальности</p>
         <div class="article-content">
-          <p>Привет, ребят, я — Андрей Бергани. Передаю всем респект и вайб хорошего настроения...</p>
+          <p>Привет, ребят, я — Андрей Бергани.</p>
+          <p>Передаю всем респект и вайб хорошего настроения. Немного под влиянием Шмуса — этого самого ускорителя прогресса, апдейта мышления, апгрейда сознания.</p>
         </div>
       </div>
     </article>
@@ -112,9 +93,9 @@
     <article class="post fade-up">
       <div class="post-text">
         <h3>Что такое Шмус?</h3>
-        <img src="images/shmuss.jpeg" alt="Шмусландия" class="post-image-bottom" loading="lazy">
+        <img src="images/shmuss.jpeg" alt="Как рождаются сезоны" class="post-image-bottom" loading="lazy">
         <div class="article-content">
-          <p>Шмусландия — страна, граждане которой словили вайб прогресса и апдейт сознания...</p>
+          <p>Шмусландия (Шмус) — это страна, граждане которой словили вайб прогресса, ускоренно качают мозг, чинят карму...</p>
         </div>
       </div>
     </article>
@@ -122,18 +103,16 @@
     <article class="post fade-up">
       <div class="post-text">
         <h3>Кому зайдут «Сезоны в Шмусе»?</h3>
-        <img src="images/harmony.jpeg" alt="Гармония и утопии" class="post-image-bottom" loading="lazy">
+        <img src="images/harmony.jpeg" alt="Мечты и утопии" class="post-image-bottom" loading="lazy">
         <div class="article-content">
-          <p>Сезон в Шмусе — это если бы саморазвитие, юмор и наука устроили вечеринку...</p>
+          <p>Сезон в Шмусе — это как если бы саморазвитие, юмор и наука устроили вечеринку...</p>
         </div>
       </div>
     </article>
 
-    <!-- Subscribe -->
     <section class="subscribe-section fade-up" id="subscribe">
       <h2 class="section-title">Подписка</h2>
       <p class="subscribe-text">Подпишитесь и получите первый короткий рассказ бесплатно — PDF «Апдейт сознания».</p>
-
       <form class="subscribe-form" action="https://formspree.io/f/your_form_id" method="POST">
         <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
         <button type="submit" class="btn">Получить рассказ</button>
@@ -142,7 +121,6 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-content">
       <div class="social-links">
@@ -155,22 +133,16 @@
   </footer>
 
   <script>
-    document.querySelector('.menu-toggle').addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.toggle('open');
-    });
-
     window.addEventListener('load', () => document.body.classList.add('loaded'));
-
-    const els = document.querySelectorAll('.fade-up');
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          obs.unobserve(e.target);
-        }
-      });
-    }, {threshold: 0.15});
-    els.forEach(el => obs.observe(el));
+    (function(){
+      const els=document.querySelectorAll('.fade-up');
+      const obs=new IntersectionObserver(entries=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}
+        });
+      },{threshold:0.15});
+      els.forEach(el=>obs.observe(el));
+    })();
   </script>
 </body>
 </html>
