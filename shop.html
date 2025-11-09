@@ -3,24 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Книги — Сезон в Шмусе | Андрей Бергани</title>
-  <meta name="description" content="Магазин книг Андрея Бергани — 'Сезон в Шмусе'. Рассказы и сезоны с философским и футуристическим оттенком.">
+  <title>Магазин — Сезон в Шмусе</title>
+  <meta name="description" content="Купить книги 'Сезона в Шмусе' — рассказы и сезоны Андрея Бергани.">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <nav class="top-nav">
-    <div class="nav-container">
-      <div class="logo">ШМУС</div>
-      <button class="menu-toggle" aria-label="Меню">☰</button>
-      <div class="nav-links">
-        <a href="index.html" class="nav-link">Главная</a>
-        <a href="shop.html" class="nav-link">Книги</a>
-        <a href="index.html#about" class="nav-link">Об авторе</a>
-        <a href="index.html#subscribe" class="nav-link btn-outline">Подписаться</a>
-      </div>
-    </div>
+    <a href="index.html" class="nav-link">Главная</a>
+    <a href="shop.html" class="nav-link">Книги</a>
+    <a href="index.html#about" class="nav-link">Об авторе</a>
+    <a href="index.html#subscribe" class="nav-link btn-outline">Подписаться</a>
   </nav>
 
   <header class="shop-header">
@@ -30,21 +24,21 @@
 
   <section class="shop">
     <div class="book-card fade-up">
-      <img src="images/Probudon.jpeg" alt="ПРОБУДОН ГЕНИЕВ" class="book-image" loading="lazy">
+      <img src="images/Probudon.jpeg" alt="Обложка: ПРОБУДОН ГЕНИЕВ" class="book-image" loading="lazy">
       <h2>ПРОБУДОН ГЕНИЕВ</h2>
-      <p>Сезон чилловой бездны гениальности и апгрейдов мышления.</p>
+      <p>Сезон чилловой бездны гениальности — апдейты мышления, апгрейды жизни и немного шмус-магии.</p>
       <a href="#" class="btn">Купить</a>
     </div>
 
     <div class="book-card fade-up">
-      <img src="images/Razmnozhenie.png" alt="РАЗМНОЖЕНИЕ УМНЫХ" class="book-image" loading="lazy">
+      <img src="images/Razmnozhenie.png" alt="Обложка: РАЗМНОЖЕНИЕ УМНЫХ" class="book-image" loading="lazy">
       <h2>РАЗМНОЖЕНИЕ УМНЫХ</h2>
-      <p>Каждая страница — как софт для мозга. Обновись и перезагрузись.</p>
+      <p>Каждая страница — как софт для мозга. Скачал, обновился, проснулся в новой версии себя.</p>
       <a href="#" class="btn">Купить</a>
     </div>
 
     <div class="book-card fade-up">
-      <img src="images/Pianaya.png" alt="С ПЬЯНОЙ РАДОСТИ" class="book-image" loading="lazy">
+      <img src="images/Pianaya.png" alt="Обложка: С ПЬЯНОЙ РАДОСТИ" class="book-image" loading="lazy">
       <h2>С ПЬЯНОЙ РАДОСТИ</h2>
       <p>Не про алкоголь — про жизнь, которая вставляет лучше любого бокала.</p>
       <a href="#" class="btn">Купить</a>
@@ -61,15 +55,22 @@
         <a href="https://t.me/your_telegram" class="social-link telegram-link" target="_blank">Telegram</a>
         <a href="mailto:your@email.com" class="social-link email-link">Email</a>
       </div>
-      <p class="copyright">© 2025 Андрей Бергани</p>
+      <p class="copyright">© 2025 Автор Андрей Бергани</p>
       <a href="privacy.html" class="footer-link">Политика конфиденциальности</a>
     </div>
   </footer>
 
   <script>
-    document.querySelector('.menu-toggle').addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.toggle('open');
-    });
+    window.addEventListener('load',()=>document.body.classList.add('loaded'));
+    (function(){
+      const els=document.querySelectorAll('.fade-up');
+      const obs=new IntersectionObserver(entries=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}
+        });
+      },{threshold:0.15});
+      els.forEach(el=>obs.observe(el));
+    })();
   </script>
 </body>
 </html>
