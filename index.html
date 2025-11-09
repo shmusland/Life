@@ -19,40 +19,19 @@
   <!-- Favicon -->
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-  <!-- Preload hero image for faster render -->
+  <!-- Preload hero image -->
   <link rel="preload" as="image" href="images/sezon.jpeg">
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Main stylesheet -->
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://shmusland.life/#author",
-        "name": "Андрей Бергани",
-        "url": "https://shmusland.life/",
-        "sameAs": []
-      },
-      {
-        "@type": "WebSite",
-        "url": "https://shmusland.life/",
-        "name": "Сезон в Шмусе",
-        "author": {
-          "@id": "https://shmusland.life/#author"
-        }
-      }
-    ]
-  }
-  </script>
-
-  <!-- Google Analytics -->
+  <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXCTNR4M16"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -62,7 +41,6 @@
   </script>
 </head>
 <body>
-  <!-- Top navigation -->
   <nav class="top-nav" role="navigation" aria-label="Главное меню">
     <a href="index.html" class="nav-link">Главная</a>
     <a href="shop.html" class="nav-link">Книги</a>
@@ -70,17 +48,15 @@
     <a href="#subscribe" class="nav-link btn-outline">Подписаться</a>
   </nav>
 
-  <!-- HERO -->
-  <header class="hero" role="banner" aria-label="Главная секция">
-    <div class="overlay" aria-hidden="true"></div>
+  <header class="hero" role="banner">
+    <div class="overlay"></div>
     <div class="content">
-      <div class="author-container" aria-hidden="true">
+      <div class="author-container">
         <h3 class="author-name">Андрей Бергани</h3>
       </div>
-
       <div class="title-container fade-up">
         <h1>Сезон в Шмусе</h1>
-        <p class="lead">Не просто книги — это портал во вселенную, где адекватность пьёт чай с хаосом по фану.</p>
+        <p class="lead">Не просто книги — портал во вселенную, где адекватность пьёт чай с хаосом по фану.</p>
         <div class="hero-ctas">
           <a href="shop.html" class="btn">Посмотреть книги</a>
           <a href="#subscribe" class="btn btn-secondary">Первый рассказ бесплатно</a>
@@ -89,77 +65,67 @@
     </div>
   </header>
 
-  <!-- Main content -->
   <main class="articles" id="maincontent" tabindex="-1">
     <h2 class="section-title" id="about">ОБ АВТОРЕ</h2>
 
-    <article class="post author-post fade-up" aria-labelledby="author-title">
+    <article class="post author-post fade-up">
       <div class="author-photo-container">
         <img src="images/aftor.jpeg" alt="Портрет Андрея Бергани" class="author-photo" loading="lazy" width="200" height="200">
       </div>
-
       <div class="post-text">
-        <h3 id="author-title">АНДРЕЙ БЕРГАНИ</h3>
+        <h3>АНДРЕЙ БЕРГАНИ</h3>
         <p class="post-excerpt">Сезон в Шмусе — мой внутренний тренажёр реальности</p>
         <div class="article-content">
-          <!-- original text preserved -->
           <p>Привет, ребят, я — Андрей Бергани.</p>
-          <p>Передаю всем респект и вайб хорошего настроения. Немного под влиянием Шмуса, этого самого ускорителя прогресса, апдейта мышления, апгрейда сознания.</p>
-          <!-- остальной текст автора оставлен без изменений -->
+          <p>Передаю всем респект и вайб хорошего настроения. Немного под влиянием Шмуса — ускорителя прогресса и апгрейда сознания.</p>
         </div>
       </div>
     </article>
 
     <h2 class="section-title fade-up">О СЕЗОНАХ</h2>
 
-    <article class="post fade-up" aria-labelledby="shmus-title">
+    <article class="post fade-up">
       <div class="post-text">
-        <h3 id="shmus-title">Что такое Шмус?</h3>
+        <h3>Что такое Шмус?</h3>
         <img src="images/shmuss.jpeg" alt="Как рождаются сезоны" class="post-image-bottom" loading="lazy" width="400" height="250">
         <div class="article-content">
-          <p>Шмусландия (Шмус) — это страна, граждане которой словили вайб прогресса, ускоренно качают мозг, чинят карму...</p>
-          <!-- остальной текст сохранён -->
+          <p>Шмусландия — страна, граждане которой словили вайб прогресса и чинят карму через иронию.</p>
         </div>
       </div>
     </article>
 
-    <article class="post fade-up" aria-labelledby="who-title">
+    <article class="post fade-up">
       <div class="post-text">
-        <h3 id="who-title">Кому зайдут «Сезоны в Шмусе»?</h3>
+        <h3>Кому зайдут «Сезоны в Шмусе»?</h3>
         <img src="images/harmony.jpeg" alt="Мечты и утопии" class="post-image-bottom" loading="lazy" width="400" height="250">
         <div class="article-content">
-          <p>Сезон в Шмусе — это как если бы саморазвитие, юмор и наука устроили вечеринку...</p>
+          <p>Сезон в Шмусе — это если бы саморазвитие, юмор и наука устроили вечеринку.</p>
         </div>
       </div>
     </article>
 
-    <!-- Subscribe / Lead magnet -->
-    <section class="subscribe-section fade-up" id="subscribe" aria-label="Подписка на рассылку">
+    <section class="subscribe-section fade-up" id="subscribe">
       <h2 class="section-title">Подписка</h2>
       <p class="subscribe-text">Подпишитесь и получите первый короткий рассказ бесплатно — PDF «Апдейт сознания».</p>
 
-      <form class="subscribe-form" action="https://formspree.io/f/your_form_id" method="POST" accept-charset="utf-8">
-        <label for="email" class="sr-only">Email</label>
-        <input type="email" id="email" name="email" placeholder="Введите ваш email" required aria-required="true">
+      <form class="subscribe-form" action="https://formspree.io/f/your_form_id" method="POST">
+        <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
         <button type="submit" class="btn">Получить рассказ</button>
       </form>
       <p class="subscribe-note">Никакого спама — только сезоны и мысли от автора.</p>
     </section>
-
   </main>
 
-  <!-- Footer -->
-  <footer role="contentinfo">
+  <footer>
     <div class="footer-content">
-      <div class="social-links" role="navigation" aria-label="Социальные ссылки">
+      <div class="social-links">
         <a href="https://t.me/your_telegram" class="social-link telegram-link" target="_blank" rel="noopener noreferrer">
-          Telegram
+          <i class="fa-brands fa-telegram"></i> Telegram
         </a>
         <a href="mailto:your@email.com" class="social-link email-link">
-          Email
+          <i class="fa-solid fa-envelope"></i> Email
         </a>
       </div>
-
       <p class="copyright">© 2025 Сезон в Шмусе — Андрей Бергани</p>
       <div class="footer-meta">
         <a href="privacy.html" class="footer-link">Политика конфиденциальности</a>
@@ -167,21 +133,16 @@
     </div>
   </footer>
 
-  <!-- Small utility scripts: fade-in and intersection animations -->
   <script>
     window.addEventListener('load', () => document.body.classList.add('loaded'));
-
-    (function() {
-      const els = document.querySelectorAll('.fade-up');
-      const obs = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            e.target.classList.add('visible');
-            obs.unobserve(e.target);
-          }
+    (function(){
+      const els=document.querySelectorAll('.fade-up');
+      const obs=new IntersectionObserver(entries=>{
+        entries.forEach(e=>{
+          if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}
         });
-      }, {threshold: 0.15});
-      els.forEach(el => obs.observe(el));
+      },{threshold:0.15});
+      els.forEach(el=>obs.observe(el));
     })();
   </script>
 </body>
