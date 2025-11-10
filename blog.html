@@ -1,64 +1,248 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Блог — Сезон в Шмусе</title>
-  <meta name="description" content="Блог Андрея Бергани — статьи, эссе и рассказы из мира Шмусландии. Тексты о жизни, развитии, обществе и человеке." />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="canonical" href="https://shmusland.life/blog.html" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Погружение в сезоны Шмуса — Блог Андрея Бергани</title>
+  <meta name="description" content="Блог 'Погружение в сезоны Шмуса' — статьи, эссе и рассказы Андрея Бергани. Апдейты сознания, размножение умных, философия будущего.">
+  <meta name="author" content="Андрей Бергани">
+  <meta name="keywords" content="Шмус, блог, сезоны, Андрей Бергани, статьи, эссе, философия, развитие сознания">
 
-  <!-- Микроразметка для поисковиков -->
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Погружение в сезоны Шмуса — Блог Андрея Бергани">
+  <meta property="og:description" content="Статьи, эссе и рассказы о развитии сознания, философии будущего и апгрейде мышления.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://shmusland.life/images/sezon1.jpeg">
+  <meta property="og:url" content="https://shmusland.life/blog.html">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://shmusland.life/blog.html">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "Сезон в Шмусе — блог Андрея Бергани",
+    "name": "Погружение в сезоны Шмуса",
     "url": "https://shmusland.life/blog.html",
     "author": {
       "@type": "Person",
       "name": "Андрей Бергани"
     },
-    "description": "Статьи, главы, рассказы и размышления о развитии, эволюции, технологиях и обществе в Шмусландии."
+    "description": "Блог о развитии сознания, философии будущего и апгрейде мышления в мире Шмусландии",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Сезон в Шмусе",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://shmusland.life/images/favicon.ico"
+      }
+    }
   }
   </script>
-</head>
 
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXCTNR4M16"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FXCTNR4M16');
+  </script>
+</head>
 <body>
-  <header class="header">
-    <h1>Блог Шмусландии</h1>
-    <nav>
-      <a href="index.html">Главная</a>
-      <a href="shop.html">Книги</a>
-      <a href="about.html">Об авторе</a>
-      <a href="blog.html" class="active">Блог</a>
-    </nav>
+  <!-- Top navigation -->
+  <nav class="top-nav" role="navigation" aria-label="Главное меню">
+    <a href="index.html" class="nav-link">Главная</a>
+    <a href="shop.html" class="nav-link">Книги</a>
+    <a href="blog.html" class="nav-link">Сезоны</a>
+    <a href="index.html#about" class="nav-link">Об авторе</a>
+    <a href="index.html#subscribe" class="nav-link btn-outline">Подписаться</a>
+  </nav>
+
+  <!-- Blog Header -->
+  <header class="blog-header">
+    <div class="blog-header-content">
+      <h1>Погружение в сезоны Шмуса</h1>
+      <p class="blog-header-lead">Статьи, эссе и рассказы о развитии сознания, философии будущего и апгрейде мышления</p>
+    </div>
   </header>
 
-  <main class="blog-container">
-    <section class="blog-list">
-      <article class="blog-post">
-        <img src="images/post1.jpg" alt="Сезон в Шмусе — эссе о будущем" />
-        <div>
-          <h2><a href="articles/season-in-shmus.html">Сезон в Шмусе: идиллия безделья и новые формы бытия</a></h2>
-          <p>Размышления о том, как искусственный разум, комфорт и социальные условия превращают жизнь в искусство эволюции...</p>
-          <span class="blog-date">10 ноября 2025</span>
-        </div>
-      </article>
+  <!-- Main Blog Content -->
+  <main class="blog-main">
+    <div class="blog-container">
+      <div class="blog-grid">
+        <!-- Featured Article -->
+        <article class="blog-card featured fade-up">
+          <div class="blog-image-container">
+            <img src="images/sezon1.jpeg" alt="Апдейт сознания: как перезагрузить мозг" class="blog-image" loading="lazy">
+            <span class="featured-badge">Главный сезон</span>
+          </div>
+          <div class="blog-content">
+            <h2><a href="blog/apdeyt-soznaniya.html">Апдейт сознания: как перезагрузить мозг</a></h2>
+            <p class="blog-excerpt">Практические методы перепрошивки мышления и выхода на новые уровни осознанности. От нейропластичности до квантовых скачков в восприятии реальности. Как научиться видеть мир за пределами привычных шаблонов и обновить свою операционную систему мышления.</p>
+            <div class="blog-meta">
+              <span class="blog-date">15 января 2025</span>
+              <span class="blog-read-time">8 мин чтения</span>
+              <span class="blog-category">Сознание</span>
+            </div>
+            <a href="blog/apdeyt-soznaniya.html" class="blog-link">Читать полный сезон →</a>
+          </div>
+        </article>
 
-      <article class="blog-post">
-        <img src="images/post2.jpg" alt="Будущее общества и технологии" />
-        <div>
-          <h2><a href="articles/future-of-leisure.html">Будущее безделья: куда исчезает смысл труда</a></h2>
-          <p>Шмусландия — страна, где работать не нужно. Что происходит с человеческой природой, когда исчезает необходимость действовать?</p>
-          <span class="blog-date">3 ноября 2025</span>
-        </div>
-      </article>
-    </section>
+        <!-- Regular Articles -->
+        <article class="blog-card fade-up">
+          <div class="blog-image-container">
+            <img src="images/sezon2.jpeg" alt="Размножение умных: эволюция по выбору" class="blog-image" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <h3><a href="blog/razmnozhenie-umnyh.html">Размножение умных: эволюция по выбору</a></h3>
+            <p class="blog-excerpt">Как интеллект становится новой валютой размножения и почему гении будущего будут создавать себе подобных осознанно. Исследование феномена ментального наследия и передачи когнитивных паттернов.</p>
+            <div class="blog-meta">
+              <span class="blog-date">22 января 2025</span>
+              <span class="blog-read-time">12 мин чтения</span>
+              <span class="blog-category">Эволюция</span>
+            </div>
+            <a href="blog/razmnozhenie-umnyh.html" class="blog-link">Читать сезон →</a>
+          </div>
+        </article>
+
+        <article class="blog-card fade-up">
+          <div class="blog-image-container">
+            <img src="images/sezon3.jpeg" alt="С пьяной радости: химия счастья" class="blog-image" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <h3><a href="blog/s-pyanoy-radosti.html">С пьяной радости: химия счастья</a></h3>
+            <p class="blog-excerpt">Исследование состояний эйфории без веществ. Как достичь естественного кайфа через перенастройку нейрохимии и перепрограммирование центров удовольствия в мозге.</p>
+            <div class="blog-meta">
+              <span class="blog-date">29 января 2025</span>
+              <span class="blog-read-time">10 мин чтения</span>
+              <span class="blog-category">Психология</span>
+            </div>
+            <a href="blog/s-pyanoy-radosti.html" class="blog-link">Читать сезон →</a>
+          </div>
+        </article>
+
+        <article class="blog-card fade-up">
+          <div class="blog-image-container">
+            <img src="images/sezon4.jpeg" alt="Квантовые отношения: любовь в многомерности" class="blog-image" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <h3><a href="blog/kvantovye-otnosheniya.html">Квантовые отношения: любовь в многомерности</a></h3>
+            <p class="blog-excerpt">Как выстроить отношения, которые существуют одновременно в нескольких реальностях. От квантовой запутанности душ до многомерной коммуникации.</p>
+            <div class="blog-meta">
+              <span class="blog-date">5 февраля 2025</span>
+              <span class="blog-read-time">14 мин чтения</span>
+              <span class="blog-category">Отношения</span>
+            </div>
+            <a href="blog/kvantovye-otnosheniya.html" class="blog-link">Читать сезон →</a>
+          </div>
+        </article>
+
+        <article class="blog-card fade-up">
+          <div class="blog-image-container">
+            <img src="images/sezon5.jpeg" alt="Ментальный фитнес: качаем мозг" class="blog-image" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <h3><a href="blog/mentalnyy-fitnes.html">Ментальный фитнес: качаем мозг</a></h3>
+            <p class="blog-excerpt">Тренировочная программа для развития когнитивных способностей. От нейробики до осознанных сновидений — полный гид по апгрейду мышления.</p>
+            <div class="blog-meta">
+              <span class="blog-date">12 февраля 2025</span>
+              <span class="blog-read-time">9 мин чтения</span>
+              <span class="blog-category">Развитие</span>
+            </div>
+            <a href="blog/mentalnyy-fitnes.html" class="blog-link">Читать сезон →</a>
+          </div>
+        </article>
+
+        <article class="blog-card fade-up">
+          <div class="blog-image-container">
+            <img src="images/sezon6.jpeg" alt="Шмус-экономика: валюта будущего" class="blog-image" loading="lazy">
+          </div>
+          <div class="blog-content">
+            <h3><a href="blog/shmus-ekonomika.html">Шмус-экономика: валюта будущего</a></h3>
+            <p class="blog-excerpt">Как внимание, осознанность и когнитивные ресурсы становятся новой валютой в экономике Шмусландии. Переход от денег к ментальному капиталу.</p>
+            <div class="blog-meta">
+              <span class="blog-date">19 февраля 2025</span>
+              <span class="blog-read-time">11 мин чтения</span>
+              <span class="blog-category">Экономика</span>
+            </div>
+            <a href="blog/shmus-ekonomika.html" class="blog-link">Читать сезон →</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Blog Pagination -->
+      <div class="blog-pagination">
+        <a href="#" class="pagination-btn active">1</a>
+        <a href="#" class="pagination-btn">2</a>
+        <a href="#" class="pagination-btn">3</a>
+        <span class="pagination-ellipsis">...</span>
+        <a href="#" class="pagination-btn">Следующие сезоны →</a>
+      </div>
+
+      <!-- Newsletter CTA -->
+      <section class="blog-newsletter">
+        <h3>Не пропусти новые сезоны</h3>
+        <p>Подпишись и получай уведомления о новых статьях прямо на почту</p>
+        <form class="subscribe-form" action="https://formspree.io/f/your_form_id" method="POST">
+          <input type="email" name="email" placeholder="Введите ваш email" required>
+          <button type="submit" class="btn">Подписаться на сезоны</button>
+        </form>
+      </section>
+    </div>
   </main>
 
-  <footer class="footer">
-    <p>© 2025 Андрей Бергани — Сезон в Шмусе</p>
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <div class="social-links" role="navigation" aria-label="Социальные ссылки">
+        <a href="https://t.me/your_telegram" class="social-link telegram-link" target="_blank" rel="noopener noreferrer">
+          <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.158l-1.67 7.894c-.123.579-.445.723-.9.449l-2.524-1.854-1.216 1.168c-.134.134-.247.247-.506.247l.18-2.848 4.942-4.454c.201-.18-.045-.28-.312-.101l-6.116 3.875-2.635-.823c-.575-.18-.589-.575.12-.854l10.316-3.977c.479-.18.9.134.74.854z"/>
+          </svg>
+          Telegram
+        </a>
+        <a href="mailto:your@email.com" class="social-link email-link">
+          <svg class="social-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          Email
+        </a>
+      </div>
+
+      <p class="copyright">© 2025 Сезон в Шмусе — Андрей Бергани</p>
+      <div class="footer-meta">
+        <a href="privacy.html" class="footer-link">Политика конфиденциальности</a>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    window.addEventListener('load', () => document.body.classList.add('loaded'));
+
+    // Intersection Observer for fade-up animations
+    (function() {
+      const els = document.querySelectorAll('.fade-up');
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }
+        });
+      }, {threshold: 0.15});
+      els.forEach(el => obs.observe(el));
+    })();
+  </script>
 </body>
 </html>
