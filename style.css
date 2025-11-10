@@ -28,8 +28,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.2rem;
-  padding: 1rem;
+  gap: 1rem;
+  padding: 0.8rem;
   background-color: #fafafa;
   position: sticky;
   top: 0;
@@ -41,9 +41,11 @@ img {
   text-decoration: none;
   color: #1a1a1a;
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   transition: all 0.3s;
   opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .nav-link:hover,
@@ -54,14 +56,16 @@ img {
 
 .btn-outline {
   border: 2px solid #ff6600;
-  padding: 0.4rem 0.8rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 6px;
   color: #ff6600;
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   transition: all 0.3s;
   opacity: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .btn-outline:hover {
@@ -367,10 +371,15 @@ img {
 }
 
 .blog-date,
-.blog-read-time,
+.blog-comments,
 .blog-category {
   display: flex;
   align-items: center;
+}
+
+.blog-comments {
+  color: #ff6600;
+  font-weight: 500;
 }
 
 .blog-category {
@@ -603,6 +612,24 @@ body.dark-theme .btn-outline:hover {
   color: #1a1a1a;
 }
 
+/* Dark footer for shop */
+body.dark-theme footer {
+  background-color: #2d2d2d;
+  border-top-color: #444;
+}
+
+body.dark-theme .social-link {
+  color: #fff;
+}
+
+body.dark-theme .footer-link {
+  color: #999;
+}
+
+body.dark-theme .copyright {
+  color: #ccc;
+}
+
 .shop-header {
   background: #111;
   text-align: center;
@@ -764,12 +791,17 @@ body.dark-theme .btn-outline:hover {
   }
 
   .top-nav {
-    gap: 0.8rem;
-    padding: 0.8rem;
+    gap: 0.6rem;
+    padding: 0.6rem;
   }
 
   .nav-link {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
+  }
+
+  .btn-outline {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.5rem;
   }
 
   .hero h1 {
