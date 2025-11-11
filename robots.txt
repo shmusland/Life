@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shmusland.life/sitemap.xml
