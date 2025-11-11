@@ -197,49 +197,103 @@
     <section class="blog-section fade-up" id="blog">
       <h2 class="section-title">ПОГРУЖЕНИЕ В СЕЗОНЫ ШМУСА</h2>
       
-      <div class="blog-grid">
-        <article class="blog-card fade-up">
-          <div class="blog-image-container">
-            <img src="images/sins.jpeg" alt="Апдейт сознания: как перезагрузить мозг" class="blog-image" loading="lazy">
-          </div>
-          <div class="blog-content">
-            <h3>Апдейт сознания: как перезагрузить мозг</h3>
-            <p class="blog-excerpt">Практические методы перепрошивки мышления и выхода на новые уровни осознанности. От нейропластичности до квантовых скачков...</p>
-            <div class="blog-meta">
+      <div class="blog-posts">
+        <article class="blog-post-card fade-up">
+          <div class="blog-post-header">
+            <h3><a href="blog/apdeyt-soznaniya.html">Апдейт сознания: как перезагрузить мозг</a></h3>
+            <div class="blog-post-meta">
               <span class="blog-date">15 января 2025</span>
-              <span class="blog-comments">12 комментариев</span>
+              <span class="blog-comments" onclick="toggleCommentForm(this)">12 комментариев</span>
             </div>
-            <a href="blog/apdeyt-soznaniya.html" class="blog-link">Читать сезон →</a>
+          </div>
+          <img src="images/sezon1.jpeg" alt="Апдейт сознания: как перезагрузить мозг" class="blog-post-image" loading="lazy">
+          <p class="blog-post-excerpt">Практические методы перепрошивки мышления и выхода на новые уровни осознанности. От нейропластичности до квантовых скачков в восприятии реальности. Как научиться видеть мир за пределами привычных шаблонов и обновить свою операционную систему мышления.</p>
+          <a href="blog/apdeyt-soznaniya.html" class="blog-post-link">Читать полный сезон →</a>
+          
+          <!-- Comment Form -->
+          <div class="comment-form" id="comment-form-1">
+            <h4>Оставить комментарий</h4>
+            <form onsubmit="submitComment(event, this)">
+              <div class="form-group">
+                <label for="name-1">Имя</label>
+                <input type="text" id="name-1" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email-1">Email</label>
+                <input type="email" id="email-1" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="comment-1">Комментарий</label>
+                <textarea id="comment-1" name="comment" required></textarea>
+              </div>
+              <button type="submit" class="submit-comment">Отправить комментарий</button>
+            </form>
           </div>
         </article>
 
-        <article class="blog-card fade-up">
-          <div class="blog-image-container">
-            <img src="images/sins.jpeg" alt="Размножение умных: эволюция по выбору" class="blog-image" loading="lazy">
-          </div>
-          <div class="blog-content">
-            <h3>Размножение умных: эволюция по выбору</h3>
-            <p class="blog-excerpt">Как интеллект становится новой валютой размножения и почему гении будущего будут создавать себе подобных осознанно...</p>
-            <div class="blog-meta">
+        <article class="blog-post-card fade-up">
+          <div class="blog-post-header">
+            <h3><a href="blog/razmnozhenie-umnyh.html">Размножение умных: эволюция по выбору</a></h3>
+            <div class="blog-post-meta">
               <span class="blog-date">22 января 2025</span>
-              <span class="blog-comments">8 комментариев</span>
+              <span class="blog-comments" onclick="toggleCommentForm(this)">8 комментариев</span>
             </div>
-            <a href="blog/razmnozhenie-umnyh.html" class="blog-link">Читать сезон →</a>
+          </div>
+          <img src="images/sezon2.jpeg" alt="Размножение умных: эволюция по выбору" class="blog-post-image" loading="lazy">
+          <p class="blog-post-excerpt">Как интеллект становится новой валютой размножения и почему гении будущего будут создавать себе подобных осознанно. Исследование феномена ментального наследия и передачи когнитивных паттернов в эпоху искусственного интеллекта и цифрового бессмертия.</p>
+          <a href="blog/razmnozhenie-umnyh.html" class="blog-post-link">Читать сезон →</a>
+          
+          <!-- Comment Form -->
+          <div class="comment-form" id="comment-form-2">
+            <h4>Оставить комментарий</h4>
+            <form onsubmit="submitComment(event, this)">
+              <div class="form-group">
+                <label for="name-2">Имя</label>
+                <input type="text" id="name-2" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email-2">Email</label>
+                <input type="email" id="email-2" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="comment-2">Комментарий</label>
+                <textarea id="comment-2" name="comment" required></textarea>
+              </div>
+              <button type="submit" class="submit-comment">Отправить комментарий</button>
+            </form>
           </div>
         </article>
 
-        <article class="blog-card fade-up">
-          <div class="blog-image-container">
-            <img src="images/sins.jpeg" alt="С пьяной радости: химия счастья" class="blog-image" loading="lazy">
-          </div>
-          <div class="blog-content">
-            <h3>С пьяной радости: химия счастья</h3>
-            <p class="blog-excerpt">Исследование состояний эйфории без веществ. Как достичь естественного кайфа через перенастройку нейрохимии...</p>
-            <div class="blog-meta">
+        <article class="blog-post-card fade-up">
+          <div class="blog-post-header">
+            <h3><a href="blog/s-pyanoy-radosti.html">С пьяной радости: химия счастья</a></h3>
+            <div class="blog-post-meta">
               <span class="blog-date">29 января 2025</span>
-              <span class="blog-comments">15 комментариев</span>
+              <span class="blog-comments" onclick="toggleCommentForm(this)">15 комментариев</span>
             </div>
-            <a href="blog/s-pyanoy-radosti.html" class="blog-link">Читать сезон →</a>
+          </div>
+          <img src="images/sezon3.jpeg" alt="С пьяной радости: химия счастья" class="blog-post-image" loading="lazy">
+          <p class="blog-post-excerpt">Исследование состояний эйфории без веществ. Как достичь естественного кайфа через перенастройку нейрохимии и перепрограммирование центров удовольствия в мозге. От дофаминового детокса до осознанного управления эмоциональными состояниями.</p>
+          <a href="blog/s-pyanoy-radosti.html" class="blog-post-link">Читать сезон →</a>
+          
+          <!-- Comment Form -->
+          <div class="comment-form" id="comment-form-3">
+            <h4>Оставить комментарий</h4>
+            <form onsubmit="submitComment(event, this)">
+              <div class="form-group">
+                <label for="name-3">Имя</label>
+                <input type="text" id="name-3" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email-3">Email</label>
+                <input type="email" id="email-3" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="comment-3">Комментарий</label>
+                <textarea id="comment-3" name="comment" required></textarea>
+              </div>
+              <button type="submit" class="submit-comment">Отправить комментарий</button>
+            </form>
           </div>
         </article>
       </div>
@@ -308,6 +362,35 @@
         collapseContainer.querySelector('.text-preview').style.display = 'block';
       });
     });
+
+    // Comment functionality
+    function toggleCommentForm(element) {
+      const postCard = element.closest('.blog-post-card');
+      const commentForm = postCard.querySelector('.comment-form');
+      const allForms = document.querySelectorAll('.comment-form');
+      
+      // Close all other forms
+      allForms.forEach(form => {
+        if (form !== commentForm) {
+          form.classList.remove('active');
+        }
+      });
+      
+      // Toggle current form
+      commentForm.classList.toggle('active');
+    }
+
+    function submitComment(event, form) {
+      event.preventDefault();
+      
+      // Here you would typically send the data to a server
+      // For now, we'll just show an alert and reset the form
+      alert('Комментарий отправлен! После модерации он появится на сайте.');
+      form.reset();
+      
+      // Close the form
+      form.closest('.comment-form').classList.remove('active');
+    }
 
     // Intersection Observer for fade-up animations
     (function() {
