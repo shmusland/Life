@@ -939,3 +939,35 @@ article img {
   color: #0066cc;
   text-decoration: underline;
 }
+/* Навигационные кнопки (Главная, Книги, Сезоны, Об авторе, Подписаться) */
+nav a {
+  display: inline-block;
+  padding: 10px 18px;
+  margin: 0 6px;
+  background: #c45500; /* тёмно-оранжевый */
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+/* Hover эффект */
+nav a:hover {
+  background: #a64800; /* чуть темнее */
+  transform: translateY(-2px);
+}
+
+/* Активная/текущая страница (если захочешь использовать класс active) */
+nav a.active {
+  background: #8f3c00;
+}
+
+/* Для мобильных – чтобы кнопки не слипались */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 8px 0;
+    text-align: center;
+  }
+}
