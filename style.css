@@ -880,3 +880,62 @@ body.dark-theme .copyright {
   white-space: nowrap;
   border: 0;
 }
+/* Контейнер статьи */
+.article-content {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+/* Заголовок */
+.article-content h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+/* Дата */
+.article-date {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Основная картинка */
+.article-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* Подзаголовки */
+.article-content h2 {
+  margin-top: 30px;
+  font-size: 26px;
+}
+
+.article-content h3 {
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+/* Абзацы */
+.article-content p {
+  margin: 15px 0;
+}
+
+/* Изображения внутри статьи */
+article img {
+  width: 100%;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+/* Ссылки */
+.article-content a {
+  color: #0066cc;
+  text-decoration: underline;
+}
