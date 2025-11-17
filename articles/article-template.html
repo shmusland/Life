@@ -3,17 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>Заголовок статьи — Сезон в Шмусе</title>
-  <meta name="description" content="Краткое описание статьи — 150 символов, чтобы её индексировали поисковики." />
+  <meta name="description" content="Краткое описание статьи — 150 символов." />
   <link rel="stylesheet" href="../style.css" />
   <link rel="canonical" href="https://shmusland.life/articles/article-name.html" />
 
-  <!-- Schema.org микроразметка -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Заголовок статьи — Сезон в Шмусе">
+  <meta property="og:description" content="Краткое описание статьи.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://shmusland.life/articles/article-name.html">
+  <meta property="og:image" content="https://shmusland.life/images/post1.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Заголовок статьи — Сезон в Шмусе">
+  <meta name="twitter:description" content="Краткое описание статьи.">
+  <meta name="twitter:image" content="https://shmusland.life/images/post1.jpg">
+
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "Заголовок статьи",
+    "image": "https://shmusland.life/images/post1.jpg",
     "author": {
       "@type": "Person",
       "name": "Андрей Бергани"
@@ -23,8 +38,7 @@
       "name": "Shmusland.life"
     },
     "datePublished": "2025-11-10",
-    "image": "https://shmusland.life/images/post1.jpg",
-    "articleBody": "Основной текст статьи..."
+    "description": "Краткое описание статьи."
   }
   </script>
 </head>
@@ -39,16 +53,19 @@
   </header>
 
   <main class="article-content">
-    <h1>Заголовок статьи</h1>
-    <p class="article-date">10 ноября 2025</p>
-
-    <img src="../images/post1.jpg" alt="Описание изображения" class="article-image" />
 
     <article>
-      <p>Здесь размещается основной текст статьи. Используй обычные абзацы, подзаголовки `<h2>` и `<h3>`, вставляй изображения, цитаты, ссылки.</p>
-      <h2>Подзаголовок раздела</h2>
-      <p>Продолжение текста...</p>
+      <h1>Заголовок статьи</h1>
+      <p class="article-date">10 ноября 2025</p>
+
+      <img src="../images/post1.jpg" alt="Описание изображения" class="article-image" />
+
+      <p>Здесь размещается основной текст статьи... Абзацы, ссылки, структурирование, блоки.</p>
+
+      <h2>Подзаголовок</h2>
+      <p>Текст раздела...</p>
     </article>
+
   </main>
 
   <footer class="footer">
