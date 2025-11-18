@@ -292,13 +292,29 @@ img {
    Blog Page Styles
    ===================== */
 .blog-header {
-  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  position: relative;
+  background: url('images/blog-header-bg.jpg') center/cover no-repeat; /* Замените на свою картинку */
   color: white;
   padding: 4rem 2rem;
   text-align: center;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный оверлей для лучшей читаемости текста */
 }
 
 .blog-header-content {
+  position: relative;
+  z-index: 2;
   max-width: 800px;
   margin: 0 auto;
 }
